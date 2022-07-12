@@ -1,0 +1,83 @@
+body {
+  background: #25272a;
+  transition: background-color 150ms ease-out;
+}
+body.day-background {
+  background: #ffdb88;
+}
+.button-con {
+  cursor: default;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -76px;
+  margin-top: -18px;
+}
+
+#dayIcon,
+#nightIcon {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  top: -3px;
+  margin: 0 7px;
+  cursor: pointer;
+}
+.toggle {
+  display: none;
+}
+.toggle,
+.toggle::after,
+.toggle::before,
+.toggle *,
+.toggle *::after,
+.toggle *::before,
+.toggle + .toggle-button {
+  box-sizing: border-box;
+}
+.toggle::selection,
+.toggle::after::selection,
+.toggle::before::selection,
+.toggle *::selection,
+.toggle *::after::selection,
+.toggle *::before::selection,
+.toggle + .toggle-button::selection {
+  background: none;
+}
+
+.toggle + .toggle-button {
+  outline: none;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid #333;
+  user-select: none;
+}
+
+.toggle + .toggle-button::after,
+.toggle + .toggle-button::before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.toggle + .toggle-button::after {
+  left: 0;
+  background: rgba(156, 174, 192, 0.27);
+  border-radius: 1em;
+  transition: all 0.2s ease;
+}
+.toggle + .toggle-button::before {
+  display: none;
+}
+.toggle:checked + .toggle-button::after {
+  left: 50%;
+}
+.toggle + .toggle-button {
+  padding: 2px;
+  border: 2px solid rgba(156, 174, 192, 0.27);
+  border-radius: 2em;
+}
